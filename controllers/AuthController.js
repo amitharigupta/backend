@@ -68,6 +68,15 @@ class AuthController {
         }
     }
 
+    static async getUserDetails(req, res) {
+        try {
+            const user = await prisma.users.findUnique({ where: { email: req.email }});
+            return res.status(200).json({ status: 200, message: "User fetched successfully", data: user });
+        } catch (error) {
+            console.log(`Error while getting getUserDetails ${error}`);
+        }
+    }
+
     static async logout(req, res) {
         try {
 
