@@ -10,4 +10,7 @@ router.post('/auth/login', AuthController.login);
 
 router.get('/', authMiddleware, AuthController.getUserDetails);
 
+// Profile update
+router.patch('/profile/:id', authMiddleware, AuthController.updateUserProfile)
+
 export default router;

@@ -1,0 +1,74 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "node-learn",
+    "dateExported": "2024-01-28T08:33:39.362Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "2f527ee4-ad58-441e-aaf1-cb1fdd2478c6",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-01-28T05:03:07.477Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "b780bd4e-7eb4-485f-9faf-3f7ff43e4d36",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "",
+            "name": "register user",
+            "url": "http://localhost:4000/api/v1/users/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-01-26T16:55:21.432Z",
+            "modified": "2024-01-28T03:33:00.680Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Amit Gupta\",\n  \"email\": \"amit@gmail.com\",\n  \"password\": \"123456\",\n  \"password_confirmation\": \"123456\",\n  \"gender\": 1,\n  \"profile\": \"kjdkjwdjkwjdjqjdjqwjkdjbwjdbjhesbdhjbwhdbq\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae9c868a-a222-4ca7-bc6e-cd08cd19d9d8",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "",
+            "name": "login user",
+            "url": "http://localhost:4000/api/v1/users/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-01-28T04:21:26.798Z",
+            "modified": "2024-01-28T04:29:04.538Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"amit@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "778309f5-2726-4b58-8a08-35625d90e575",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "2f527ee4-ad58-441e-aaf1-cb1fdd2478c6",
+            "name": "user data",
+            "url": "http://localhost:4000/api/v1/users",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-28T05:03:16.262Z",
+            "modified": "2024-01-28T05:06:44.642Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAZ21haWwuY29tIiwiaWF0IjoxNzA2NDE2NjM1LCJleHAiOjE3MDY1MDMwMzV9.Mjo2p7_HhNHZs0AIkAtdm-RYUVLQEJemv7V75bOgZRE"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
