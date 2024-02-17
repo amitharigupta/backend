@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "node-learn",
-    "dateExported": "2024-02-17T15:52:26.358Z",
+    "dateExported": "2024-02-17T16:45:18.276Z",
     "version": "1.1",
     "folders": [
         {
@@ -175,6 +175,59 @@
                     "isPath": false
                 }
             ],
+            "tests": []
+        },
+        {
+            "_id": "3498ed70-b9f3-4f8b-a1b3-0c9a126ac0ad",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "8c1e4540-c9e3-4ac9-9998-328b145b4b1d",
+            "name": "Get Simgle News",
+            "url": "http://localhost:4000/api/v1/news/1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-17T16:01:05.897Z",
+            "modified": "2024-02-17T16:03:25.069Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5c67116b-15ac-43fc-9701-922829d0d2c6",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "8c1e4540-c9e3-4ac9-9998-328b145b4b1d",
+            "name": "update news",
+            "url": "http://localhost:4000/api/v1/news/1",
+            "method": "PATCH",
+            "sortNum": 90000,
+            "created": "2024-02-17T16:34:25.045Z",
+            "modified": "2024-02-17T16:35:40.635Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImlhdCI6MTcwODE3OTU5NSwiZXhwIjoxNzA4MjY1OTk1fQ.Krvn6TWoSV66mdrV5juN1B11vYlpwJeeSF6EwQ7tuZg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "updating news"
+                    },
+                    {
+                        "name": "content",
+                        "value": "updating content"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "image",
+                        "value": "/Users/amitg/Desktop/Screenshot 2024-02-12 at 5.37.59 PM.png"
+                    }
+                ]
+            },
             "tests": []
         }
     ]
