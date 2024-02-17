@@ -20,6 +20,8 @@ const authMiddleware = async (req, res, next) => {
         }
         console.log(isTokenValid)
         req.email = isTokenValid.email;
+        req.user = isTokenValid;
+
         next();
     } catch (error) {
         

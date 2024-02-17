@@ -52,7 +52,7 @@ class AuthController {
             }
 
             // Generate Token
-            let token = await generateAuthToken({ id: payload.id, email: payload.email });
+            let token = await generateAuthToken({ id: isEmailExist.id, email: payload.email });
             if(!token) {
                 return res.status(400).json({ status: 400, message: "Invalid Token" });
             }

@@ -23,3 +23,15 @@ export const bytesToMB = (bytes) => {
 export const generateRandomNum = () =>  {
     return uuidv4();
 }
+
+export const responseTransformer = (news, protocol, host) => {
+    return {
+        id: news.id,
+        title: news.title,
+        content: news.content,
+        image: `${protocol}://${host}/images/${news.image}`,
+        created_at: news.created_at,
+        updated_at: news.updated_at,
+        reporter: news.user
+    }
+}

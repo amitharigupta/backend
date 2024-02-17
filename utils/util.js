@@ -35,7 +35,6 @@ export const compareValidToken = async (token) => {
     try {
         let isValidToken = await jwt.verify(token, process.env.JWT_SECRET);
 
-        
         return isValidToken;
     } catch (error) {
         console.log(`Error while validating token ${error}`);
