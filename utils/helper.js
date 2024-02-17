@@ -1,5 +1,7 @@
 import { supportedMimesType } from "../config/fileSystem.js";
 import { v4 as uuidv4 } from "uuid";
+import fs from "fs";
+import path from "path";
 
 export const imageValidator = async (size, mime) => {
     try {
@@ -20,7 +22,7 @@ export const bytesToMB = (bytes) => {
     return bytes / (1024 * 1024);
 }
 
-export const generateRandomNum = () =>  {
+export const generateRandomNum = () => {
     return uuidv4();
 }
 
@@ -34,4 +36,29 @@ export const responseTransformer = (news, protocol, host) => {
         updated_at: news.updated_at,
         reporter: news.user
     }
+}
+
+// To delete old images while updating or deleting
+export const removeImage = (imageName) => {
+    try {
+        let path = process.cwd() + "/public/images/" + imageName;
+        if (fs.existsSync(path)) {
+            fs.unlinkSync(path);
+        }
+    } catch (error) {
+        console.log(`Error while deleting image: ${error}`);
+    }
+}
+
+export const uploadImage = async (image) => {
+    const imgExt = path.extname(image.name);
+    const imageName = await generateRandomNum() + imgExt;
+
+    const uploadPath = process.cwd() + "/public/images/" + imageName;
+
+    image.mv(uploadPath, (err) => {
+        if (err) throw err;
+    });
+
+    return imageName;
 }

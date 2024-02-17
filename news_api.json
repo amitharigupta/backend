@@ -1,0 +1,181 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "node-learn",
+    "dateExported": "2024-02-17T15:52:26.358Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "2f527ee4-ad58-441e-aaf1-cb1fdd2478c6",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-01-28T05:03:07.477Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "8c1e4540-c9e3-4ac9-9998-328b145b4b1d",
+            "name": "news",
+            "containerId": "",
+            "created": "2024-02-10T12:00:47.371Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "b780bd4e-7eb4-485f-9faf-3f7ff43e4d36",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "",
+            "name": "register user",
+            "url": "http://localhost:4000/api/v1/users/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-01-26T16:55:21.432Z",
+            "modified": "2024-01-28T03:33:00.680Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Amit Gupta\",\n  \"email\": \"amit@gmail.com\",\n  \"password\": \"123456\",\n  \"password_confirmation\": \"123456\",\n  \"gender\": 1,\n  \"profile\": \"kjdkjwdjkwjdjqjdjqwjkdjbwjdbjhesbdhjbwhdbq\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae9c868a-a222-4ca7-bc6e-cd08cd19d9d8",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "",
+            "name": "login user",
+            "url": "http://localhost:4000/api/v1/users/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-01-28T04:21:26.798Z",
+            "modified": "2024-01-28T04:29:04.538Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"amit@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "778309f5-2726-4b58-8a08-35625d90e575",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "2f527ee4-ad58-441e-aaf1-cb1fdd2478c6",
+            "name": "user data",
+            "url": "http://localhost:4000/api/v1/users",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-28T05:03:16.262Z",
+            "modified": "2024-02-17T13:45:13.415Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAZ21haWwuY29tIiwiaWF0IjoxNzA4MTc2OTAwLCJleHAiOjE3MDgyNjMzMDB9.ubkgl8V451ZHsWeO-4-DrZJPadp_2d4n3Nh7LOxBPU0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3ae30602-85fe-4ebd-86c4-c90436ab18f0",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "2f527ee4-ad58-441e-aaf1-cb1fdd2478c6",
+            "name": "update profile user",
+            "url": "http://localhost:4000/api/v1/users/profile/1",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2024-01-28T10:24:50.259Z",
+            "modified": "2024-01-28T10:31:05.099Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAZ21haWwuY29tIiwiaWF0IjoxNzA2NDE2NjM1LCJleHAiOjE3MDY1MDMwMzV9.Mjo2p7_HhNHZs0AIkAtdm-RYUVLQEJemv7V75bOgZRE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "profile",
+                        "value": "/Users/amitg/Downloads/image.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "039d16bb-1d67-4f96-9230-895714ed5fd3",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "8c1e4540-c9e3-4ac9-9998-328b145b4b1d",
+            "name": "create news",
+            "url": "http://localhost:4000/api/v1/news",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-02-10T12:01:02.209Z",
+            "modified": "2024-02-17T14:20:12.986Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImlhdCI6MTcwODE3OTU5NSwiZXhwIjoxNzA4MjY1OTk1fQ.Krvn6TWoSV66mdrV5juN1B11vYlpwJeeSF6EwQ7tuZg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Breaking News 1"
+                    },
+                    {
+                        "name": "content",
+                        "value": "This is breaking news 1"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "image",
+                        "value": "/Users/amitg/Desktop/Screenshot 2024-02-16 at 3.36.47 PM.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "57207d9e-bcc4-41a7-8fb1-4a4b34dd24ce",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "8c1e4540-c9e3-4ac9-9998-328b145b4b1d",
+            "name": "Get News",
+            "url": "http://localhost:4000/api/v1/news?limit=1&page=3",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-02-17T15:08:16.901Z",
+            "modified": "2024-02-17T15:51:25.138Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImlhdCI6MTcwODE3OTU5NSwiZXhwIjoxNzA4MjY1OTk1fQ.Krvn6TWoSV66mdrV5juN1B11vYlpwJeeSF6EwQ7tuZg",
+                    "isDisabled": true
+                }
+            ],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

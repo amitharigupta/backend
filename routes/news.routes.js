@@ -12,6 +12,6 @@ router.delete('/:id', authMiddleware, NewsController.destroy);
 
 router.get('/', NewsController.getAllNews);
 
-router.get('/:id', authMiddleware, NewsController.show);
+router.get('/:id', NewsController.show);
 
 export default router;
