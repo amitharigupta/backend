@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "node-learn",
-    "dateExported": "2024-02-17T16:45:18.276Z",
+    "dateExported": "2024-02-17T16:57:27.143Z",
     "version": "1.1",
     "folders": [
         {
@@ -228,6 +228,25 @@
                     }
                 ]
             },
+            "tests": []
+        },
+        {
+            "_id": "e7d033d6-a732-4543-a087-7f6d8ca40ddb",
+            "colId": "ffe7654d-e4de-4150-abc3-0fb18c1695ea",
+            "containerId": "8c1e4540-c9e3-4ac9-9998-328b145b4b1d",
+            "name": "Delete New",
+            "url": "http://localhost:4000/api/v1/news/1",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-02-17T16:53:07.193Z",
+            "modified": "2024-02-17T16:53:37.044Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbWl0QGdtYWlsLmNvbSIsImlhdCI6MTcwODE3OTU5NSwiZXhwIjoxNzA4MjY1OTk1fQ.Krvn6TWoSV66mdrV5juN1B11vYlpwJeeSF6EwQ7tuZg"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]

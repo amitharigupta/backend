@@ -119,12 +119,15 @@ class NewsController {
                     }
                 }
             });
+            if(!news) {
+                return res.status(404).json({ status: 404, message: "No news found" });
+            }
 
             const host = req.get('host');
             const protocol = req.protocol;
             const transformedResponse = responseTransformer(news, protocol, host);
 
-            if (news) {
+            if (transformedResponse) {
                 return res.status(200).json({ status: 200, message: "News Fetched successfully", data: transformedResponse })
             } else {
                 return res.status(404).json({ status: 404, message: "No news found" });
@@ -147,7 +150,7 @@ class NewsController {
             });
 
             if (user.id !== news.user_id) {
-                return res.status().json({ status: 401, message: "UnAuthorized Access" });
+                return res.status(401).json({ status: 401, message: "UnAuthorized Access" });
             }
 
             const validator = vine.compile(newsSchema);
@@ -198,7 +201,27 @@ class NewsController {
     }
 
     static async destroy(req, res) {
+        try {
+            const { id } = req.params;
+            const user = req.user;
 
+            const news = await prisma.news.findUnique({ where: { id: Number(id) } });
+
+            if (user.id !== news.user_id) {
+                return res.status(401).json({ status: 401, message: "UnAuthorized Access" });
+            }
+
+            // Delete old image
+            await removeImage(news.image);
+
+            const destroy = await prisma.news.delete({ where: { id: Number(id) } });
+
+            return res.status(200).json({ status: 200, message: "News deleted successfully", data: destroy });
+
+        } catch (error) {
+            console.log(`Error while getting show ${destroy}`);
+            return res.status(500).json({ status: 500, message: "Internal Server Error" });
+        }
     }
 }
 
